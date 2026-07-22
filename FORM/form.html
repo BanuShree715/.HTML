@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function confirmSubmit() {
+            var result = confirm("Are you sure you want to submit the form?");
+            if(result) {
+                alert("Registration Successful!");
+                return true;
+            }
+            else {
+                alert("Submission Cancelled!");
+                return false;
+            }
+        }
+
+        function showAlert() {
+            alert("Welcome to the Registration Form!");
+        }
+    </script>
+
+</head>
+
+<body bgcolor="lightblue">
+
+<center>
+
+<h2>Student Registration Form</h2>
+
+<form onsubmit="return confirmSubmit();">
+
+    <label>Full Name:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" required><br><br>
+
+    <label>Address:</label><br>
+    <textarea rows="4" cols="30"></textarea><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+    <br><br>
+
+    <label>Hobbies:</label><br>
+    <input type="checkbox"> Reading
+    <input type="checkbox"> Music
+    <input type="checkbox"> Sports
+    <br><br>
+
+    <label>Course:</label><br>
+    <select>
+        <option>Select Course</option>
+        <option>B.Sc Computer Science</option>
+        <option>BCA</option>
+        <option>B.Com</option>
+        <option>BBA</option>
+    </select>
+    <br><br>
+
+    <label>Upload Photo:</label><br>
+    <input type="file"><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <input type="button" value="Alert Box" onclick="showAlert()">
+
+</form>
+
+</center>
+
+</body>
+</html>
